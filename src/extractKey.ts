@@ -151,7 +151,7 @@ export function getAllArgumentsFromSelectionSet(
 export function getAllArgumentsFromSelection(
     selection: SelectionNode,
   ): ArgumentNode[] {
-    if (!selection) {
+    if (!selection || !selection.directives) {
         return [];
     }
 
